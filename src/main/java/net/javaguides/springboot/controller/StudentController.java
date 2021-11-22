@@ -59,6 +59,7 @@ public class StudentController {
 		existingStudent.setFirstName(student.getFirstName());
 		existingStudent.setLastName(student.getLastName());
 		existingStudent.setEmail(student.getEmail());
+		existingStudent.setCourse(student.getCourse());
 		
 		//save updated student object
 		studentService.updateStudent(existingStudent);
