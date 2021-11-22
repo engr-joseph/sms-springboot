@@ -23,6 +23,9 @@ public class Student {
 	
 	@Column(name = "email")
 	private String email;
+
+	@Column(name = "course")
+	private String course;
 	
 	public Student(){
 		
@@ -60,5 +63,11 @@ public class Student {
 		this.email = email;
 	}
 
-	
+	public String getCourse() {
+		return course;
+	}
+
+	public void setCourse(String course) {
+		this.course = course;
+	}
 }
