@@ -23,15 +23,28 @@ public class Teacher {
 	
 	@Column(name = "email")
 	private String email;
+
+	@Column(name = "department")
+	private String department;
+
+	@Column(name = "address")
+	private String address;
+
+	@Column(name = "number")
+	private String number;
 	
 	public Teacher() {
 		
 	}
-	public Teacher(String firstName, String lastName, String email) {
+	public Teacher(String firstName, String lastName, String email, String department, String address, String number) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.department = department;
+		this.address = address;
+		this.number = number;
+
 	}
 	
 	public Long getId() {
@@ -57,6 +70,24 @@ public class Teacher {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
 	}
 	
 	

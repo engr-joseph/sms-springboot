@@ -59,6 +59,10 @@ crossorigin="anonymous">
 					<th>Teacher First Name</th>
 					<th>Teacher Last Name</th>
 					<th>Teacher Email</th>
+					<th>Teacher Department</th>
+					<th>Teacher Address</th>
+					<th>Teacher Number</th>
+
 					<th sec:authorize="hasAnyAuthority('EDITOR', 'ADMIN')">Actions</th>
 				</tr>
 			</thead>
@@ -67,6 +71,10 @@ crossorigin="anonymous">
 					<td th:text = "${teachers.firstName}"></td>
 					<td th:text = "${teachers.lastName}"></td>
 					<td th:text = "${teachers.email}"></td>
+					<td th:text = "${teachers.department}"></td>
+					<td th:text = "${teachers.address}"></td>
+					<td th:text = "${teachers.number}"></td>
+
 					<td sec:authorize="hasAnyAuthority('EDITOR', 'ADMIN')">
 						<div sec:authorize="hasAnyAuthority('EDITOR', 'ADMIN')">
 							<a th:href="@{/teachers/edit/{id}(id=${teachers.id})}"
