@@ -60,6 +60,8 @@ crossorigin="anonymous">
 					<th>Student Last Name</th>
 					<th>Student Email</th>
 					<th>Student Course</th>
+					<th>Student Address</th>
+					<th>Student Number</th>
 					<th sec:authorize="hasAnyAuthority('EDITOR', 'ADMIN')">Actions</th>
 				</tr>
 			</thead >
@@ -69,6 +71,8 @@ crossorigin="anonymous">
 					<td th:text = "${student.lastName}"></td >
 					<td th:text = "${student.email}"></td >
 					<td th:text= "${student.course}"></td>
+					<td th:text= "${student.address}"></td>
+					<td th:text= "${student.student_number}"></td>
 					<td sec:authorize="hasAnyAuthority('EDITOR', 'ADMIN')">
 						<div sec:authorize="hasAnyAuthority('EDITOR', 'ADMIN')">
 							<a th:href="@{/students/edit/{id}(id=${student.id})}"

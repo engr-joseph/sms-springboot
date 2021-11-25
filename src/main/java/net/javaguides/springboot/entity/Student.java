@@ -26,6 +26,12 @@ public class Student {
 
 	@Column(name = "course")
 	private String course;
+
+	@Column(name = "address")
+	private String address;
+
+	@Column(name = "student_number")
+	private String student_number;
 	
 	public Student(){
 		
@@ -70,4 +76,13 @@ public class Student {
 	public void setCourse(String course) {
 		this.course = course;
 	}
+
+	public String getAddress() {return address;}
+
+	public void setAddress(String address) {this.address = address;}
+
+	public String getStudent_number() {return student_number;}
+
+	public void setStudent_number(String student_number) {this.student_number = student_number;}
 }
+	

@@ -60,6 +60,9 @@ public class StudentController {
 		existingStudent.setLastName(student.getLastName());
 		existingStudent.setEmail(student.getEmail());
 		existingStudent.setCourse(student.getCourse());
+		existingStudent.setAddress(student.getAddress());
+		existingStudent.setStudent_number(student.getStudent_number());
+
 		
 		//save updated student object
 		studentService.updateStudent(existingStudent);
